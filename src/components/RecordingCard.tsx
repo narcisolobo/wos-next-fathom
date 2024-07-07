@@ -21,7 +21,7 @@ function RecordingCard({ recording }: RecordingCardProps) {
           width={320}
           height={180}
           alt={image.alt}
-          src={`https://wos-next-fathom.vercel.app${image.url}`}
+          src={`https://wos-next-fathom.vercel.app/media/${image.filename}`}
           component={NextImage}
         />
       </CardSection>
