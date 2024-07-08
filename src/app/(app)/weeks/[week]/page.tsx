@@ -1,6 +1,6 @@
-import { getPayloadHMR } from '@payloadcms/next/utilities'
-import config from '@payload-config'
 import Week from '@/components/Week'
+import config from '@payload-config'
+import { getPayloadHMR } from '@payloadcms/next/utilities'
 
 interface WeekPageProps {
   params: { week: string }

@@ -1,8 +1,7 @@
-import NextImage from 'next/image'
-import { Recording } from '@/payload-types'
-import { Button, Card, CardSection, Image, Text, Title } from '@mantine/core'
+import { Media, Recording } from '@/payload-types'
+import { Card, CardSection, Image, Text, Title } from '@mantine/core'
 import { format } from 'date-fns'
-import { Media } from '@/payload-types'
+import NextImage from 'next/image'
 import ViewButton from './ViewButton'
 
 interface RecordingCardProps {
@@ -13,17 +12,12 @@ function RecordingCard({ recording }: RecordingCardProps) {
   const date = format(recording.date, 'MMMM d, yyyy')
   const time = format(recording.date, 'h:mmaaa')
   const image = recording.thumbnail as Media
+  console.log(image.url)
 
   return (
     <Card component="article" shadow="md" padding="lg" radius="md" withBorder>
       <CardSection>
-        <Image
-          width={320}
-          height={180}
-          alt={image.alt}
-          src={`https://wos-next-fathom.vercel.app/media/${image.filename}`}
-          component={NextImage}
-        />
+        <Image width={320} height={180} alt={image.alt} src={image.url} component={NextImage} />
       </CardSection>
       <Title order={2} my="lg">
         {recording.description}

@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import { AppShellNavbar, NavLink } from '@mantine/core'
 import { IconStack2 } from '@tabler/icons-react'
+import Link from 'next/link'
 import WeekLink from './WeekLink'
 
 function Navbar() {

@@ -1,9 +1,9 @@
 import { Recording } from '@/payload-types'
-import RecordingCard from './RecordingCard'
-import { PaginatedDocs } from 'payload'
 import { getTitle } from '@/utils/get-title'
-import Crumbs from './Crumbs'
 import { SimpleGrid } from '@mantine/core'
+import { PaginatedDocs } from 'payload'
+import Crumbs from './Crumbs'
+import RecordingCard from './RecordingCard'
 
 interface WeekProps {
   recordings: PaginatedDocs<Recording>

@@ -1,9 +1,9 @@
 'use client'
 
-import Link from 'next/link'
 import { NavLink } from '@mantine/core'
-import { usePathname } from 'next/navigation'
 import { IconCalendarWeek } from '@tabler/icons-react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 interface WeekLinkProps {
   href: string

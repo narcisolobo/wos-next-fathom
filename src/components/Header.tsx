@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import { AppShellHeader, Burger, Group, Text } from '@mantine/core'
 import CDLogo from '@/assets/images/cd-logo.png'
+import { AppShellHeader, Burger, Group, Text } from '@mantine/core'
+import Image from 'next/image'
 
 interface HeaderProps {
   opened: boolean

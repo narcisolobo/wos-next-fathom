@@ -1,8 +1,8 @@
-import { Rubik } from 'next/font/google'
+import Shell from '@/components/Shell'
+import theme from '@/mantine-theme/theme'
 import { ColorSchemeScript, MantineProvider } from '@mantine/core'
 import '@mantine/core/styles.css'
-import theme from '@/mantine-theme/theme'
-import Shell from '@/components/Shell'
+import { Rubik } from 'next/font/google'
 
 const rubik = Rubik({
   subsets: ['latin'],
