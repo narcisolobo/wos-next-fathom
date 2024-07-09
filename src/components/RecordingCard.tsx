@@ -24,16 +24,17 @@ async function RecordingCard({ recording }: RecordingCardProps) {
           component={NextImage}
         />
       </CardSection>
-      <Title order={2}>{recording.description}</Title>
-      <div>
-        <Text>
-          Week: {recording.week}, Day: {recording.day}
-        </Text>
-        <Text>
-          Date: {date}, Time: {time}
-        </Text>
-      </div>
-      <ViewButton link={recording.link} />
+      <Stack justify="space-between" pt="md" style={{ height: '100%' }}>
+        <Title order={2}>{recording.description}</Title>
+        <Stack gap="sm">
+          <Text>
+            Week: {recording.week}, Day: {recording.day}
+            <br />
+            Date: {date}, Time: {time}
+          </Text>
+          <ViewButton link={recording.link} />
+        </Stack>
+      </Stack>
     </Card>
   )
 }
