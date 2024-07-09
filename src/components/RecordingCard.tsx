@@ -24,7 +24,7 @@ async function RecordingCard({ recording }: RecordingCardProps) {
           component={NextImage}
         />
       </CardSection>
-      \<Title order={2}>{recording.description}</Title>
+      <Title order={2}>{recording.description}</Title>
       <div>
         <Text>
           Week: {recording.week}, Day: {recording.day}
