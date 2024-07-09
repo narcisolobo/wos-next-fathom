@@ -1,5 +1,5 @@
-import { Media, Recording } from '@/payload-types'
-import { Card, CardSection, Image, Text, Title } from '@mantine/core'
+import { Recording } from '@/payload-types'
+import { Card, CardSection, Image, Stack, Text, Title } from '@mantine/core'
 import { format } from 'date-fns'
 import NextImage from 'next/image'
 import ViewButton from './ViewButton'
@@ -8,27 +8,34 @@ interface RecordingCardProps {
   recording: Recording
 }
 
-function RecordingCard({ recording }: RecordingCardProps) {
+async function RecordingCard({ recording }: RecordingCardProps) {
   const date = format(recording.date, 'MMMM d, yyyy')
   const time = format(recording.date, 'h:mmaaa')
-  const image = recording.thumbnail as Media
-  console.log(image.url)
+  const imagekitId = process.env.IMAGEKIT_ID
 
   return (
     <Card component="article" shadow="md" padding="lg" radius="md" withBorder>
       <CardSection>
-        <Image width={320} height={180} alt={image.alt} src={image.url} component={NextImage} />
+        <Image
+          width={320}
+          height={180}
+          alt={recording.description}
+          src={`https://ik.imagekit.io/${imagekitId}/wos/${recording.image}`}
+          component={NextImage}
+        />
       </CardSection>
-      <Title order={2} my="lg">
-        {recording.description}
-      </Title>
-      <Text>
-        Week: {recording.week}, Day: {recording.day}
-      </Text>
-      <Text>
-        Date: {date}, Time: {time}
-      </Text>
-      <ViewButton link={recording.link} />
+      <Stack justify="space-between" pt="md" mih="100%">
+        <Title order={2}>{recording.description}</Title>
+        <div>
+          <Text>
+            Week: {recording.week}, Day: {recording.day}
+          </Text>
+          <Text>
+            Date: {date}, Time: {time}
+          </Text>
+        </div>
+        <ViewButton link={recording.link} />
+      </Stack>
     </Card>
   )
 }

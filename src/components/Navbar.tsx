@@ -21,7 +21,9 @@ function Navbar() {
         component={Link}
         label="Web Fundamentals"
         leftSection={<IconStack2 stroke={1.5} color="white" />}
-      />
+      >
+        <WeekLink href="/weeks/3" label="Week 3" />
+      </NavLink>
     </AppShellNavbar>
   )
 }

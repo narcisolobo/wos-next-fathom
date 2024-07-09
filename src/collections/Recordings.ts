@@ -34,10 +34,8 @@ const Recordings: CollectionConfig = {
       },
     },
     {
-      name: 'thumbnail',
-      type: 'relationship',
-      relationTo: 'media',
-      required: true,
+      name: 'image',
+      type: 'text',
     },
     {
       name: 'link',
