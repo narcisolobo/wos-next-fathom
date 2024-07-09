@@ -4,7 +4,7 @@ function Home() {
   return (
     <section id="home">
       <Title order={1}>WOS - Fathom Recordings</Title>
-      <Text fs="italic">Last updated: Tuesday, July 9 (morning)</Text>
+      <Text fs="italic">Last updated: Tuesday, July 9 (afternoon)</Text>
     </section>
   )
 }
