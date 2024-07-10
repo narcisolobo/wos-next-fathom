@@ -5,7 +5,7 @@ import WeekLink from './WeekLink'
 
 function Navbar() {
   return (
-    <AppShellNavbar p="md">
+    <AppShellNavbar p="md" id="navbar">
       <NavLink
         href="/"
         component={Link}

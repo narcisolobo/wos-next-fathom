@@ -8,7 +8,7 @@ interface CrumbsProps {
 function Crumbs({ title, week }: CrumbsProps) {
   return (
     <Group component="section">
-      <Text c="dimmed">{title}</Text>
+      <Text style={{ color: '#adb5bd' }}>{title}</Text>
       <Text c="dimmed">/</Text>
       <Text fw={500}>Week {week}</Text>
     </Group>
