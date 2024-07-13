@@ -21,7 +21,7 @@ function Header({ opened, toggle }: HeaderProps) {
         />
         <Image priority={true} src={CDLogo} width={36} height={26} alt="Coding Dojo Logo" />
         <Text size="lg" fw={500} c="white">
-          WOS - Fathom Recordings
+          WOS - Fathom
         </Text>
       </Group>
     </AppShellHeader>
