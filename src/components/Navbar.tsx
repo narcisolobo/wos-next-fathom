@@ -25,6 +25,14 @@ function Navbar() {
         <WeekLink href="/weeks/3" label="Week 3" />
         <WeekLink href="/weeks/4" label="Week 4" />
       </NavLink>
+      <NavLink
+        href="/"
+        component={Link}
+        label="C Sharp"
+        leftSection={<IconStack2 stroke={1.5} color="white" />}
+      >
+        <WeekLink href="/weeks/5" label="Week 5" />
+      </NavLink>
     </AppShellNavbar>
   )
 }
