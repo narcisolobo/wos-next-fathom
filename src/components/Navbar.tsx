@@ -34,6 +34,7 @@ function Navbar() {
         <WeekLink href="/weeks/5" label="Week 5" />
         <WeekLink href="/weeks/6" label="Week 6" />
         <WeekLink href="/weeks/7" label="Week 7" />
+        <WeekLink href="/weeks/8" label="Week 8" />
       </NavLink>
     </AppShellNavbar>
   )
