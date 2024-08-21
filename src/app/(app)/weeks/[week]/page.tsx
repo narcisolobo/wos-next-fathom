@@ -10,7 +10,7 @@ async function WeekPage({ params: { week } }: WeekPageProps) {
   const payload = await getPayloadHMR({ config })
   const recordings = await payload.find({
     collection: 'recordings',
-    sort: 'createdAt',
+    sort: 'date',
     limit: 12,
     where: {
       week: {
