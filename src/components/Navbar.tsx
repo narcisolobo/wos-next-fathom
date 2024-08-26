@@ -36,6 +36,13 @@ function Navbar() {
         <WeekLink href="/weeks/7" label="Week 7" />
         <WeekLink href="/weeks/8" label="Week 8" />
         <WeekLink href="/weeks/9" label="Week 9" />
+      </NavLink>
+      <NavLink
+        href="/"
+        component={Link}
+        label="Java"
+        leftSection={<IconStack2 stroke={1.5} color="white" />}
+      >
         <WeekLink href="/weeks/10" label="Week 10" />
       </NavLink>
     </AppShellNavbar>
