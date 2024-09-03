@@ -44,6 +44,7 @@ function Navbar() {
         leftSection={<IconStack2 stroke={1.5} color="white" />}
       >
         <WeekLink href="/weeks/10" label="Week 10" />
+        <WeekLink href="/weeks/11" label="Week 11" />
       </NavLink>
     </AppShellNavbar>
   )
