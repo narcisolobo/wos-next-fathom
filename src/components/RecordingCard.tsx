@@ -1,6 +1,7 @@
 import { Recording } from '@/payload-types'
 import { Card, CardSection, Image, Stack, Text, Title } from '@mantine/core'
 import { format } from 'date-fns'
+import { toZonedTime, formatInTimeZone } from 'date-fns-tz'
 import NextImage from 'next/image'
 import ViewButton from './ViewButton'
 
@@ -10,7 +11,7 @@ interface RecordingCardProps {
 
 async function RecordingCard({ recording }: RecordingCardProps) {
   const date = format(recording.date, 'MMMM d, yyyy')
-  const time = format(recording.date, 'h:mmaaa')
+  const time = formatInTimeZone(recording.date, 'America/Chicago', 'h:mmaaa')
   const imagekitId = process.env.IMAGEKIT_ID
 
   return (
