@@ -11,7 +11,7 @@ interface RecordingCardProps {
 
 async function RecordingCard({ recording }: RecordingCardProps) {
   const date = format(recording.date, 'MMMM d, yyyy')
-  const time = formatInTimeZone(recording.date, 'America/Chicago', 'h:mmaaa')
+  const time = formatInTimeZone(recording.date, 'America/Los_Angeles', 'h:mmaaa')
   const imagekitId = process.env.IMAGEKIT_ID
 
   return (
