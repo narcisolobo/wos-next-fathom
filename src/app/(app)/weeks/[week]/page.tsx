@@ -11,7 +11,7 @@ async function WeekPage({ params: { week } }: WeekPageProps) {
   const recordings = await payload.find({
     collection: 'recordings',
     sort: 'date',
-    limit: 12,
+    limit: 16,
     where: {
       week: {
         equals: Number(week),
